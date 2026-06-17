@@ -1,15 +1,24 @@
-Here is a comprehensive, production-ready README.md for your Static Site Generator project. It is structured to serve as both an overview for anyone visiting your repository and a step-by-step roadmap for your second build.
+# GrugSite: A Bare-Metal Markdown to HTML Compiler in Python
 
-Static Site Generator
-A custom, open-source static site generator built completely from scratch in Python. This engine reads raw Markdown files, builds an internal Abstract Syntax Tree (AST) using a custom HTML DOM object implementation, processes complex inline tokens (bold, italics, code, images, and hyperlinks), and compiles them into a unified, styled production website.
+GrugSite is a custom, open-source static site generator built completely from scratch in Python. Instead of relying on third-party parsing libraries, this engine tokenizes raw Markdown strings, constructs an internal Abstract Syntax Tree (AST) using a custom DOM node implementation, and recursively compiles the nodes into a fast, static production website.
 
-Features
-Custom HTML DOM Engine: Handles document structures recursively without relying on third-party parsing libraries.
+## 🎯 Motivation
 
-Inline Markdown Tokenizer: Processes nested styling combinations using regex lookbehinds and custom splitting logic.
+Most modern static site generators (like Hugo or Jekyll) are massive, black-box systems wrapped in complex dependencies. I built GrugSite to master the fundamental mechanics underneath the hood of web compilers:
+1. **The DOM Layer**: Managing parent-child rendering lifecycles entirely programmatically.
+2. **Lexical Analysis**: Breaking down string text streams into valid token states using regular expressions and string splitters.
+3. **AST Composition**: Structuring macro layouts (blocks) and micro styles (inline elements) into a unified, predictable hierarchy.
 
-Macro Block Processor: Classifies structural layouts (headings, unordered/ordered lists, code blocks, blockquotes, and paragraphs).
+---
 
-Automated Asset Syncing: Cleanly wipes destination paths and mirrors assets recursively.
+## 🚀 Quick Start
 
-Production Path Prefixing: Supports subdirectory nesting configurations, making it compatible with GitHub Pages out of the box.
+### 1. Requirements
+* Python 3.10 or higher
+* Unix terminal environment (Linux, WSL, or macOS)
+
+### 2. Local Development Sandbox
+To compile the site locally and spin up a development testing server, execute the launch utility script from your project root:
+```bash
+chmod +x main.sh
+./main.sh
