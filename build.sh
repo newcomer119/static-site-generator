@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 src/main.py "/YOUR_REPO_NAME/"
+python3 src/main.py "/static-site-generator/"
