@@ -1,4 +1,4 @@
-# GrugSite: A Bare-Metal Markdown to HTML Compiler in Python
+# My Amazing Static Site Generator
 
 GrugSite is a custom, open-source static site generator built completely from scratch in Python. Instead of relying on third-party parsing libraries, this engine tokenizes raw Markdown strings, constructs an internal Abstract Syntax Tree (AST) using a custom DOM node implementation, and recursively compiles the nodes into a fast, static production website.
 
